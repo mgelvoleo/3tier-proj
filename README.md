@@ -1,1 +1,1 @@
-# 3tier-proj todo list
+# 3tier-proj simple todo list 
