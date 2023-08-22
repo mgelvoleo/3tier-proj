@@ -60,7 +60,40 @@ Step: 2 Access the Master node
   kubectl create secret generic db-secret --from-literal=MYSQL_ROOT_PASSWORD=rootpassword
   ```
 
+
+  ```
+  kubectl run mysql-pod --image=mysql --dry-run=client -o yaml > mysql-pod.yaml
+  ```
   
+
+  ```
+  vi mysql-pod.yaml
+  ```
+
+
+  ```
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    createTimestamp: null
+    labels:
+      run: mysql-pod
+    name: mysql-pod
+  spec:
+    containers:
+    - image: mysql
+      name: mysql-pod
+      envFrom:
+        - configMapRef:
+          name: db-config
+        - secretRef:
+          name: db-secret
+        resources: {}
+        .......
+  ```
+
+  
+
 
 
 
