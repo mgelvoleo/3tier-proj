@@ -1,1 +1,3 @@
-# 3tier-proj simple todo list 
+# How to create 3 tier proj
+
+
