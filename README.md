@@ -92,7 +92,9 @@ Step: 2 Access the Master node
         .......
   ```
 
-  
+  ```
+  kubectl apply -f mysql-pod.yaml
+  ```
 
 
 
